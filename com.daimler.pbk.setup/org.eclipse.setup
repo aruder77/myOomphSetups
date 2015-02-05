@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Index
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="index"
+    label="Index">
+  <discoverablePackage
+      href="models/Git.ecore#/"/>
+  <discoverablePackage
+      href="models/Launching.ecore#/"/>
+  <discoverablePackage
+      href="models/JDT.ecore#/"/>
+  <discoverablePackage
+      href="models/Maven.ecore#/"/>
+  <discoverablePackage
+      href="models/Mylyn.ecore#/"/>
+  <discoverablePackage
+      href="models/PDE.ecore#/"/>
+  <discoverablePackage
+      href="models/Predicates.ecore#/"/>
+  <discoverablePackage
+      href="models/Projects.ecore#/"/>
+  <discoverablePackage
+      href="models/ProjectSet.ecore#/"/>
+  <discoverablePackage
+      href="models/Resources.ecore#/"/>
+  <discoverablePackage
+      href="models/SetupTarglets.ecore#/"/>
+  <discoverablePackage
+      href="models/SetupWorkingSets.ecore#/"/>
+  <discoverablePackage
+      href="models/Targlets.ecore#/"/>
+  <discoverablePackage
+      href="models/Workbench.ecore#/"/>
+  <discoverablePackage
+      href="models/WorkingSets.ecore#/"/>
+  <productCatalog
+      name="pbk"
+      label="PBK Eclipse Products">
+    <setupTask
+        xsi:type="setup:InstallationTask"
+        id="installation"/>
+    <setupTask
+        xsi:type="setup.p2:P2Task">
+      <requirement
+          name="org.eclipse.oomph.setup.feature.group"/>
+      <repository
+          url="${oomph.update.url}"/>
+      <repository
+          url="http://download.eclipse.org/modeling/emf/emf/updates/2.10.x/core/S201410130308"/>
+    </setupTask>
+    <product
+        name="epp.package.rcp"
+        label="Eclipse for RCP and RAP Developers">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="imageURI">
+          <value>http://www.eclipse.org/downloads/images/rcp.jpg</value>
+        </detail>
+      </annotation>
+      <version
+          name="latest.released"
+          label="Latest Release (Luna)"
+          requiredJavaVersion="1.7">
+        <setupTask
+            xsi:type="setup.p2:P2Task"
+            label="Eclipse for RCP and RAP Developers (Luna)">
+          <requirement
+              name="epp.package.rcp"
+              versionRange="[4.4.0,4.5.0)"/>
+          <requirement
+              name="org.eclipse.platform.feature.group"
+              versionRange="[4.4.0,4.5.0)"/>
+          <requirement
+              name="org.eclipse.rcp.feature.group"
+              versionRange="[4.4.0,4.5.0)"/>
+          <requirement
+              name="org.eclipse.jdt.feature.group"
+              versionRange="[3.10.0,3.11.0)"/>
+          <requirement
+              name="org.eclipse.pde.feature.group"
+              versionRange="[3.10.0,3.11.0)"/>
+          <repository
+              url="http://download.eclipse.org/technology/epp/packages/luna"/>
+          <repository
+              url="http://download.eclipse.org/releases/luna/201409261001"/>
+        </setupTask>
+      </version>
+      <description>A complete set of tools for developers who want to create Eclipse plug-ins, Rich Client Applications or Remote Application Platform (RCP+RAP), plus Mylyn, the m2e Maven integration, and an XML editor. In addition to the CVS Eclipse Team provider, it also contains the EGit tooling for accessing Git version control systems.</description>
+    </product>
+    <description>PBK Eclipse Installationen und RCP Produkte</description>
+  </productCatalog>
+  <projectCatalog
+      href="org.eclipse.projects.setup#/"/>
+</setup:Index>
