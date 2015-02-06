@@ -128,10 +128,5 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
-  <project name="BCAP"
-      label="BCAP"
-      logicalProjectContainer="/">
-    <description>Automated BCAP development environment setup.</description>
-  </project>
   <description>All the Daimler PBK projects at msg that provide automated setup support along with additional user-added projects</description>
 </setup:ProjectCatalog>
