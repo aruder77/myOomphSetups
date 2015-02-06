@@ -95,5 +95,5 @@
     <description>PBK Eclipse Installationen und RCP Produkte</description>
   </productCatalog>
   <projectCatalog
-      href="org.eclipse.projects.setup#/"/>
+      href="com.daimler.pbk.projects.setup#/"/>
 </setup:Index>
